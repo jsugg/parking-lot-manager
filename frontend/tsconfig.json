@@ -19,8 +19,9 @@
     "baseUrl": "./",
     "paths": {
       "@components/*": ["src/components/*"],
+      "*": ["src/types/*", "node_modules/@types/*"],
     },
-    "types": ["bun-types", "src/types/index.d.ts"],
+    "types": ["bun-types"],
     "lib": [
       "dom",
       "dom.iterable",
