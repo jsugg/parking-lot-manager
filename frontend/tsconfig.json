@@ -1,6 +1,44 @@
 {
-    "compilerOptions": {
-      "baseUrl": "./src",
-    }
-  }
-  
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "esModuleInterop": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./build",
+    "declaration": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"],
+    },
+    "types": ["bun-types", "src/types/index.d.ts"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "es6"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/types/index.d.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "bun.lock",
+    "public",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "build"
+  ]
+}
